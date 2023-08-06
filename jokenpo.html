@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8"/>
+
+<head>
+    <title>Jokenpô</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body>
+<center><h1 id="jokenpo">Jokenpô</h1></center> <br>
+<h2 id="escolha"><p>Clique em uma das Opções abaixo:</p></h2>
+
+<div class="container">
+    <div class="borda">
+        <form id="player">
+            <img src="img/1.png" width="100px" height="100px" onclick="pedra()"><!--pedra-->
+            <img src="img/2.png" width="100px" height="100px" onclick="papel()"><!--papel-->
+            <img src="img/3.png" width="100px" height="100px" onclick="tesoura()"><!--tesoura-->
+        </form>
+    </div>
+    <br>
+    <div class="borda">
+        <form> 
+            <img src="img/4.png" width="100px" height="100px"><!--pedra maquina-->
+            <img src="img/5.png" width="100px" height="100px"><!--papel maquina-->
+            <img src="img/6.png" width="100px" height="100px"><!--tesoura maquina-->
+        </form>
+    </div> 
+</div>
+<br><br>
+<div class="botoes">
+    <center><button onclick="reiniciar()">Reiniciar</button></center>
+</div>
+<br>
+
+<div id="mensagem"></div>
+<br><br>
+
+<div class="menu">
+    <div class="borda"><img src="img/pensa.png" id="player_img" width="200px" height="230px"></div>
+    <div><img src="img/vs.png" width="200px" height="230px"></div>
+    <div class="borda"><img src="img/CPU.png" id="CPU_img" width="200px" height="230px"></div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+<script src="js/form.js"></script>
+</html>
