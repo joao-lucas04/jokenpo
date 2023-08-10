@@ -5,12 +5,15 @@ body{
 }
 
 
+
 #jokenpo{
     font-size: 55px;
     color: #e6ff77;
     font-family: Comic Sans MS;
 
 }
+
+
 
 #escolha{
     margin-left: 20px;
@@ -19,12 +22,17 @@ body{
     font-family: Arial;
 }
 
+
+
+
 #mensagem{
     font-size: 25px;
     font-family: Arial;
     color:coral;
     text-align: center;
 }
+
+
 
 .container{
     display: flex;
@@ -43,4 +51,37 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+
+
+
+#placar_player{
+    font-family: Comic Sans MS;
+    font-size: 35px;
+    padding-right: 60px;
+    color: rgb(101, 101, 228);
+}
+
+#comparador{
+    font-family: Comic Sans MS;
+    font-size: 35px;
+    color: #ffffff;
+}
+
+#placar_CPU{
+    font-family: Comic Sans MS;
+    font-size: 35px;
+    padding-left: 60px;  
+    color: rgb(212, 75, 75);
+}
+
+
+
+#reiniciar{
+    font-family: Comic Sans MS;
+    padding: 5px;
+    background-color: #48aaeb;
+    color: white;
+    border: 2px solid hsl(0, 0%, 100%);;
+    border-radius: 4px;
 }

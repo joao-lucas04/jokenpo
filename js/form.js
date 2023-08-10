@@ -4,6 +4,26 @@ function mostrar_msg(mensagem) {
     msg.textContent = mensagem;
 }
 
+
+
+//função para o player ganhar pontos no placar
+function player_ponto(){
+    let pontos = document.getElementById('placar_player');
+    let ganhou
+    ganhou = Number(pontos.textContent) + 1;
+    pontos.textContent = ganhou;
+}
+
+//função para o computador ganhar pontos no placar
+function CPU_ponto(){
+    let pontos = document.getElementById('placar_CPU');
+    let ganhou
+    ganhou = Number(pontos.textContent) + 1;
+    pontos.textContent = ganhou;
+}
+
+
+
 //função caso o jogador escolha pedra
 function pedra(){
 
@@ -26,15 +46,18 @@ function pedra(){
         player_joga.src = "img/"+1+".png";
         CPU_joga.src = "img/"+5+".png";
         mostrar_msg('Você Perdeu -_-');
+        CPU_ponto();
         alert('Derrota');
 
     } else if (maquina===6) {
         player_joga.src = "img/"+1+".png";
         CPU_joga.src = "img/"+6+".png";
         mostrar_msg('Você Ganhou ^.^');
+        player_ponto();
         alert('Vitória!')
     }
 }
+
 
 
 //mesmo código citado, porém no caso papel
@@ -50,6 +73,7 @@ function papel(){
         player_joga.src = "img/"+2+".png";
         CPU_joga.src = "img/"+4+".png";
         mostrar_msg('Você Ganhou ^.^');
+        player_ponto();
         alert('Vitória!');
 
     } else if (maquina===5) {
@@ -62,9 +86,11 @@ function papel(){
         player_joga.src = "img/"+2+".png";
         CPU_joga.src = "img/"+6+".png";
         mostrar_msg('Você Perdeu -_-');
+        CPU_ponto();
         alert('Derrota');
     }
 }
+
 
 
 function tesoura(){
@@ -79,12 +105,14 @@ function tesoura(){
         player_joga.src = "img/"+3+".png";
         CPU_joga.src = "img/"+4+".png";
         mostrar_msg('Você Perdeu -_-');
+        CPU_ponto();
         alert('Derrota');
 
     } else if (maquina===5) {
         player_joga.src = "img/"+3+".png";
         CPU_joga.src = "img/"+5+".png";
         mostrar_msg('Você Ganhou ^.^');
+        player_ponto();
         alert('Vitória!');
 
     } else if (maquina===6) {
@@ -97,12 +125,26 @@ function tesoura(){
 
 
 
-
 //reiniciar o jogo e atualizar a página
 function reiniciar(){
-    const recomeca = document.getElementById('player');
-    recomeca.reset();
-    location.reload();
+    let ponto_player = document.getElementById('placar_player');
+    let ponto_CPU = document.getElementById('placar_CPU');
+    let zera_ponto_CPU;
+    let zera_ponto_player;
+
+    zera_ponto_player = 0;
+    zera_ponto_CPU = 0;
+
+    ponto_player.textContent = zera_ponto_player;
+    ponto_CPU.textContent = zera_ponto_CPU;
+
+    let player_joga = document.getElementById('player_img');
+    let CPU_joga = document.getElementById('CPU_img');
+    player_joga.src = "img/pensa.png";
+    CPU_joga.src = "img/CPU.png";
+
+    mostrar_msg("Vamos Jogar!!");
+
 }
 
 

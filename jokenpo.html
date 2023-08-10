@@ -5,6 +5,7 @@
 <head>
     <title>Jokenpô</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="description" content="Realiza a brincadeira clássica do jokenpo">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 
@@ -14,13 +15,19 @@
 
 <div class="container">
     <div class="borda">
-        <form id="player">
+        <form>
             <img src="img/1.png" width="100px" height="100px" onclick="pedra()"><!--pedra-->
             <img src="img/2.png" width="100px" height="100px" onclick="papel()"><!--papel-->
             <img src="img/3.png" width="100px" height="100px" onclick="tesoura()"><!--tesoura-->
         </form>
     </div>
-    <br>
+
+    <div class="menu"> 
+        <h2 id="placar_player">0</h2>
+        <h2 id="comparador">-</h2>
+        <h2 id="placar_CPU">0</h2>
+    </div>
+    
     <div class="borda">
         <form> 
             <img src="img/4.png" width="100px" height="100px"><!--pedra maquina-->
@@ -29,14 +36,14 @@
         </form>
     </div> 
 </div>
-<br><br>
-<div class="botoes">
-    <center><button onclick="reiniciar()">Reiniciar</button></center>
-</div>
-<br>
 
-<div id="mensagem"></div>
-<br><br>
+<div class="botoes">
+    <center><button onclick="reiniciar()" id="reiniciar">Reiniciar</button></center>
+</div>
+<br><br><br>
+
+<div id="mensagem">Vamos Jogar!!</div>
+<br>
 
 <div class="menu">
     <div class="borda"><img src="img/pensa.png" id="player_img" width="200px" height="230px"></div>
